@@ -47,7 +47,7 @@ export default function AboutPage() {
                   href="https://github.com/kami8ma8810"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
+                  className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
                 >
                   GitHub
                 </a>
@@ -57,7 +57,7 @@ export default function AboutPage() {
                   href="https://x.com/kami8ma8810"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
+                  className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
                 >
                   X
                 </a>
@@ -69,7 +69,7 @@ export default function AboutPage() {
           <div className="mt-12 text-center">
             <Link
               href="/"
-              className="text-sm text-zinc-500 transition-colors hover:text-yellow-600 dark:text-zinc-500 dark:hover:text-yellow-400"
+              className="relative z-0 text-sm text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
             >
               ← Home
             </Link>

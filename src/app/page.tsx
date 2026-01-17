@@ -42,19 +42,19 @@ export default function Home() {
           <nav className="mt-10 flex flex-wrap justify-center gap-6">
             <Link
               href="/blog"
-              className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
+              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
             >
               Blog
             </Link>
             <Link
               href="/graph"
-              className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
+              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
             >
               Graph
             </Link>
             <Link
               href="/about"
-              className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
+              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
             >
               About
             </Link>
