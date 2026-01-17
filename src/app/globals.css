@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@plugin "./hero.ts";
+@source "../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #ffffff;
@@ -23,4 +26,51 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/**
+ * テーマ切り替え時のフェードトランジション
+ *
+ * 注意: HeroUIコンポーネント（Switch等）にトランジションを適用すると
+ * かくつきが発生するため、主要なレイアウト要素のみに限定
+ */
+
+/* レイアウト要素のみ背景色・ボーダー色にトランジション */
+html,
+body,
+main,
+header,
+footer,
+section,
+article,
+nav,
+aside {
+  transition:
+    background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out;
+}
+
+/* テキスト要素は色のトランジション */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  transition:
+    color 200ms ease-in-out,
+    background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out;
+}
+
+/* divは直接のレイアウトコンテナのみ（HeroUIコンポーネント内のdivは除外） */
+.bg-zinc-50,
+.bg-zinc-950,
+.dark\:bg-zinc-50,
+.dark\:bg-zinc-950 {
+  transition:
+    background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out;
 }

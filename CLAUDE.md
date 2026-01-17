@@ -6,10 +6,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Obsidianに蓄積した知識とネットワークを利用したポートフォリオサイト。
 
+**根本ドキュメント**: `転職Gemini調査.md`（Obsidian Vault: My-Obsidian-Sync）
+
+このプロジェクトの全ての設計判断は、以下の学習目標に基づいている：
+1. Web全体の仕組み（HTTP, DNS, TLS, ブラウザレンダリング）
+2. 設計・技術選定（FSD、システムデザイン）
+3. バックエンド（Go言語、API設計、BFF）
+4. データベース（SQL、正規化、インデックス）
+5. インフラ（Docker、AWS、CI/CD）
+
+**計画ドキュメント**: `docs/PLAN.md`（.gitignore済み）
+
 ## 技術スタック
 
 - **Frontend**: Next.js 16 (App Router) + TypeScript
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS v4
+- **UI Library**: HeroUI（旧NextUI）- React Ariaベース
+- **Theme**: next-themes（ダークモード管理）
 - **Architecture**: Feature-Sliced Design (FSD)
 - **Node.js**: 24.13.0 (Volta管理)
 
@@ -114,6 +127,47 @@ npm run test:e2e:update
 - キーボードアクセシビリティ（Tab移動、フォーカス表示）
 - ホバー/フォーカス状態のスタイル
 - レスポンシブデザイン
+
+### ダークモード実装の注意点
+
+#### カラーパレット（60-30-10ルール）
+- **60% ベース**: 白 / 黒（zinc-50 / zinc-950）
+- **30% セカンダリ**: テキスト（zinc-900 / zinc-100）
+- **10% アクセント**: 黄色（yellow-400）
+
+詳細は `src/shared/config/colors.ts` を参照。
+
+#### トランジション設定の注意
+
+**問題**: テーマ切替時のフェードトランジションを全要素（`*`）に適用すると、HeroUIコンポーネント（Switch等）がかくつく。
+
+**原因**: HeroUIは独自のトランジションを持っており、globals.cssの `transition: background-color` と競合する。
+
+**解決策**: トランジションは主要なレイアウト要素のみに限定する。
+
+```css
+/* ✅ 良い例: レイアウト要素のみ */
+html, body, main, header, footer, section, article, nav, aside {
+  transition: background-color 200ms ease-in-out;
+}
+
+/* ❌ 悪い例: 全要素に適用 */
+*, *::before, *::after {
+  transition: background-color 200ms ease-in-out;
+}
+```
+
+**HeroUIコンポーネントのカスタマイズ**: `classNames` propを使用し、プロジェクトのカラーパレットに合わせる。
+
+```tsx
+<Switch
+  classNames={{
+    wrapper: "bg-zinc-200 group-data-[selected=true]:bg-yellow-400",
+    thumb: "bg-white dark:bg-zinc-100",
+    thumbIcon: "text-zinc-700",
+  }}
+/>
+```
 
 ### その他
 

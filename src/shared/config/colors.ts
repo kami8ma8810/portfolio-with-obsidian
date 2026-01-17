@@ -108,15 +108,18 @@ export const colorClasses = {
    * デジタル庁デザインシステム参考:
    * - 通常: 下線なし
    * - ホバー: 下線追加（色は変えない）
-   * - フォーカス: 黄色背景 + 黒アウトライン（2px）
+   * - フォーカス: 黄色背景 + アウトライン（ライト:黒 / ダーク:白）
    *
    * 下線の変化により、色だけに依存しない情報伝達を実現（WCAG 1.4.1）
+   *
+   * 注意: ダークモードではアウトラインをzinc-100に変更
+   * （zinc-900はzinc-950背景とのコントラスト比が1.12:1でFAIL）
    */
   link: {
     base: "text-zinc-600 transition-all hover:underline",
     dark: "dark:text-zinc-400",
     focus:
-      "focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900",
+      "focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-100",
   },
 
   /**
@@ -141,11 +144,13 @@ export const colorClasses = {
    *
    * デジタル庁デザインシステム参考:
    * - 黄色背景（yellow-300）
-   * - 黒アウトライン（2px、zinc-900）
+   * - アウトライン（ライト:黒zinc-900 / ダーク:白zinc-100）
+   *
+   * ダークモードではアウトラインを白に変更（コントラスト比確保のため）
    */
   focus: {
     visible:
-      "focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900",
+      "focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-100",
   },
 } as const;
 

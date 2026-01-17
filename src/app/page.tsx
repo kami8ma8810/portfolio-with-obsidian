@@ -14,6 +14,7 @@ import {
   SiGo,
   SiPostgresql,
 } from "react-icons/si";
+import { Footer } from "@/widgets/footer";
 
 export default function Home() {
   return (
@@ -42,19 +43,19 @@ export default function Home() {
           <nav className="mt-10 flex flex-wrap justify-center gap-6">
             <Link
               href="/blog"
-              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
+              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400 dark:focus-visible:outline-zinc-100"
             >
               Blog
             </Link>
             <Link
               href="/graph"
-              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
+              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400 dark:focus-visible:outline-zinc-100"
             >
               Graph
             </Link>
             <Link
               href="/about"
-              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400"
+              className="relative z-0 text-zinc-600 after:absolute after:-z-10 after:bottom-0.5 after:left-0 after:h-1 after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-150 hover:after:origin-left hover:after:scale-x-100 focus-visible:bg-yellow-300 focus-visible:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:text-zinc-400 dark:focus-visible:outline-zinc-100"
             >
               About
             </Link>
@@ -62,10 +63,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-zinc-200 py-6 text-center text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
-        Built with Next.js, Go, and PostgreSQL
-      </footer>
+      <Footer />
     </div>
   );
 }
