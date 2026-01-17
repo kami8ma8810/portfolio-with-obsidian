@@ -4,5 +4,4 @@
  * 環境変数、定数、設定値などを配置する。
  */
 
-// 現在は空。環境変数設定時に実装予定
-export {};
+export { colors, colorClasses } from "./colors";

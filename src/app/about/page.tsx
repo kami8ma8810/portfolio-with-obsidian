@@ -47,7 +47,7 @@ export default function AboutPage() {
                   href="https://github.com/kami8ma8810"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
                 >
                   GitHub
                 </a>
@@ -57,7 +57,7 @@ export default function AboutPage() {
                   href="https://x.com/kami8ma8810"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
                 >
                   X
                 </a>
@@ -69,7 +69,7 @@ export default function AboutPage() {
           <div className="mt-12 text-center">
             <Link
               href="/"
-              className="text-sm text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-100"
+              className="text-sm text-zinc-500 transition-colors hover:text-yellow-600 dark:text-zinc-500 dark:hover:text-yellow-400"
             >
               ← Home
             </Link>

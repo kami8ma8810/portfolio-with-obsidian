@@ -42,19 +42,19 @@ export default function Home() {
           <nav className="mt-10 flex flex-wrap justify-center gap-6">
             <Link
               href="/blog"
-              className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+              className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
             >
               Blog
             </Link>
             <Link
               href="/graph"
-              className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+              className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
             >
               Graph
             </Link>
             <Link
               href="/about"
-              className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+              className="text-zinc-600 transition-colors hover:text-yellow-600 dark:text-zinc-400 dark:hover:text-yellow-400"
             >
               About
             </Link>
