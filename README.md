@@ -1,0 +1,2 @@
+# portfolio-with-obsidian
+Obsidianに蓄積した知識とネットワークを利用したポートフォリオサイト
