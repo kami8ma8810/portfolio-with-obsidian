@@ -34,21 +34,27 @@ export default function Home() {
             )}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          {/* Navigation */}
+          <nav className="mt-10 flex flex-wrap justify-center gap-6">
             <Link
               href="/blog"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-6 text-base font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+              className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
             >
               Blog
             </Link>
             <Link
               href="/graph"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-300 px-6 text-base font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-900"
+              className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
             >
               Graph
             </Link>
-          </div>
+            <Link
+              href="/about"
+              className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              About
+            </Link>
+          </nav>
         </div>
       </main>
 
