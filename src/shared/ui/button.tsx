@@ -25,7 +25,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           // ベーススタイル
           "inline-flex items-center justify-center rounded-full font-semibold transition-colors",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300",
           "disabled:pointer-events-none disabled:opacity-50",
 
           // バリアント別スタイル
