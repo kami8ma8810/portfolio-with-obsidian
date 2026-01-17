@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiVuedotjs,
+  SiNuxtdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 
 export const metadata: Metadata = {
   title: "About - Hayato Kamiyama",
@@ -22,17 +30,13 @@ export default function AboutPage() {
           </section>
 
           {/* Skills */}
-          <section className="mt-8 flex flex-wrap justify-center gap-2">
-            {["TypeScript", "React", "Next.js", "Vue.js", "Nuxt.js", "Tailwind CSS"].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-zinc-200 px-3 py-1 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
-                >
-                  {tech}
-                </span>
-              )
-            )}
+          <section className="mt-8 flex flex-wrap justify-center gap-4">
+            <SiTypescript className="size-8 text-zinc-700 dark:text-zinc-300" title="TypeScript" />
+            <SiReact className="size-8 text-zinc-700 dark:text-zinc-300" title="React" />
+            <SiNextdotjs className="size-8 text-zinc-700 dark:text-zinc-300" title="Next.js" />
+            <SiVuedotjs className="size-8 text-zinc-700 dark:text-zinc-300" title="Vue.js" />
+            <SiNuxtdotjs className="size-8 text-zinc-700 dark:text-zinc-300" title="Nuxt.js" />
+            <SiTailwindcss className="size-8 text-zinc-700 dark:text-zinc-300" title="Tailwind CSS" />
           </section>
 
           {/* Links */}

@@ -6,6 +6,14 @@
  */
 
 import Link from "next/link";
+import {
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiGo,
+  SiPostgresql,
+} from "react-icons/si";
 
 export default function Home() {
   return (
@@ -20,18 +28,14 @@ export default function Home() {
             Frontend Developer
           </p>
 
-          {/* Tech Stack Tags */}
-          <div className="mt-8 flex flex-wrap justify-center gap-2">
-            {["Next.js", "TypeScript", "Tailwind", "Go", "PostgreSQL"].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-zinc-200 px-3 py-1 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
-                >
-                  {tech}
-                </span>
-              )
-            )}
+          {/* Tech Stack */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <SiNextdotjs className="size-7 text-zinc-700 dark:text-zinc-300" title="Next.js" />
+            <SiTypescript className="size-7 text-zinc-700 dark:text-zinc-300" title="TypeScript" />
+            <SiReact className="size-7 text-zinc-700 dark:text-zinc-300" title="React" />
+            <SiTailwindcss className="size-7 text-zinc-700 dark:text-zinc-300" title="Tailwind CSS" />
+            <SiGo className="size-7 text-zinc-700 dark:text-zinc-300" title="Go" />
+            <SiPostgresql className="size-7 text-zinc-700 dark:text-zinc-300" title="PostgreSQL" />
           </div>
 
           {/* Navigation */}
