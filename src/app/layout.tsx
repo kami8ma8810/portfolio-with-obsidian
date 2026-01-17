@@ -13,9 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Knowledge Graph Portfolio",
-  description:
-    "Obsidianで蓄積した知識をナレッジグラフで可視化するポートフォリオサイト",
+  title: "Hiroki Kamiyama - Frontend Developer",
+  description: "Frontend Developer のポートフォリオサイト",
 };
 
 export default function RootLayout({
