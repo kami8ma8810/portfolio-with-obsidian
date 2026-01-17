@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hiroki Kamiyama - Frontend Developer",
+  title: "Hayato Kamiyama - Frontend Developer",
   description: "Frontend Developer のポートフォリオサイト",
 };
 

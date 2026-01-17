@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About - Hiroki Kamiyama",
-  description: "Hiroki Kamiyama について",
+  title: "About - Hayato Kamiyama",
+  description: "Hayato Kamiyama について",
 };
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
           {/* Profile */}
           <section className="text-center">
             <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-              Hiroki Kamiyama
+              Hayato Kamiyama
             </h1>
             <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">
               Frontend Developer
