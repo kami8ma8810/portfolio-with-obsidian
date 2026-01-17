@@ -7,5 +7,4 @@
  * 注意: ビジネスロジックを含まない純粋なUIのみ
  */
 
-// 例: export { Button } from "./button";
-// 例: export { Card } from "./card";
+export { Button, type ButtonProps } from "./button";

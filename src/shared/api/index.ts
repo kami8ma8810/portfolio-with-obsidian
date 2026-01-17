@@ -5,5 +5,5 @@
  * 認証トークンの付与などを配置する。
  */
 
-// 例: export { apiClient } from "./client";
-// 例: export { handleApiError } from "./error-handler";
+// 現在は空。BFF構築時に実装予定
+export {};

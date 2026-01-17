@@ -5,6 +5,8 @@
  * "use client"を書かない限り、サーバーでレンダリングされる。
  */
 
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-zinc-50 dark:bg-zinc-950">
@@ -34,20 +36,20 @@ export default function Home() {
             )}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Next.js の Link コンポーネントを使用 */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
+            <Link
               href="/articles"
-              className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-6 text-base font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
             >
               記事を見る
-            </a>
-            <a
+            </Link>
+            <Link
               href="/graph"
-              className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-900"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-300 px-6 text-base font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-900"
             >
               グラフを見る
-            </a>
+            </Link>
           </div>
         </div>
       </main>
