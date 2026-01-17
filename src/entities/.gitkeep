@@ -1,0 +1,14 @@
+# entities - ビジネスエンティティ
+#
+# このレイヤーには、アプリケーションのコアとなるデータモデルを配置する。
+# 例: article, user, tag など
+#
+# 構造:
+# entities/
+# ├── article/
+# │   ├── ui/          # 記事カードなどのUI
+# │   ├── model/       # 型定義、状態管理
+# │   ├── api/         # 記事取得API
+# │   └── index.ts     # Public API
+# └── user/
+#     └── ...

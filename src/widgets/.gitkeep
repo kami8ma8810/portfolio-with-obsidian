@@ -1,0 +1,13 @@
+# widgets - 独立したUIブロック
+#
+# このレイヤーには、複数のentitiesやfeaturesを組み合わせた
+# 独立したUIブロックを配置する。
+# 例: header, sidebar, article-list など
+#
+# 構造:
+# widgets/
+# ├── header/
+# │   ├── ui/          # ヘッダーUI
+# │   └── index.ts     # Public API
+# └── sidebar/
+#     └── ...
