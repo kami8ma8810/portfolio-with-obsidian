@@ -21,15 +21,18 @@ export default function AboutPage() {
             </p>
           </section>
 
-          {/* Bio */}
-          <section className="mt-8">
-            <p className="text-center leading-7 text-zinc-600 dark:text-zinc-400">
-              Webフロントエンド開発をしています。
-              <br />
-              Vue.js / Nuxt.js での開発経験があり、
-              <br />
-              現在は React / Next.js を学習中です。
-            </p>
+          {/* Skills */}
+          <section className="mt-8 flex flex-wrap justify-center gap-2">
+            {["TypeScript", "React", "Next.js", "Vue.js", "Nuxt.js", "Tailwind CSS"].map(
+              (tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full bg-zinc-200 px-3 py-1 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+                >
+                  {tech}
+                </span>
+              )
+            )}
           </section>
 
           {/* Links */}
